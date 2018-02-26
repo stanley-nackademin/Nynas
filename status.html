@@ -51,109 +51,79 @@
   <div class="container bg-light pb-1">
     <div class="row d-flex justify-content-md-between">
 
-      <div class="col-12 col-md-9">
-        <div class="bg-white px-3 mt-4 mb-2 pb-2 border">
-          <div>
-            <article>
-              <h2>Vädret på Nicksta</h2>
-              <div class="table-responsive-md">
-                <table class="table table-striped">
-                  <caption class="d-none">Vädret på Nicksta</caption>
-                  <thead>
-                    <tr>
-                      <th scope="col">Klocka</th>
-                      <th scope="col">Väder</th>
-                      <th scope="col">Värme</th>
-                      <th scope="col">Vind</th>
-                    </tr>
-                  </thead>
-                  <tbody class="weather-data">
-                    <!-- <tr>
-                      <td>09:00</td>
-                      <td>Moln</td>
-                      <td>16&deg;C</td>
-                      <td>3m/s</td>
-                    </tr>
-                    <tr>
-                      <td>12:00</td>
-                      <td>Sol</td>
-                      <td>18&deg;C</td>
-                      <td>4m/s</td>
-                    </tr>
-                    <tr>
-                      <td>15:00</td>
-                      <td>Sol</td>
-                      <td>20&deg;C</td>
-                      <td>2m/s</td>
-                    </tr>
-                    <tr>
-                      <td>18:00</td>
-                      <td>Regn</td>
-                      <td>19&deg;C</td>
-                      <td>3m/s</td>
-                    </tr>
-                    <tr>
-                      <td>21:00</td>
-                      <td>Moln</td>
-                      <td>17&deg;C</td>
-                      <td>1m/s</td>
-                    </tr> -->
-                  </tbody>
-                </table>
-              </div>
-            </article>
+      <div class="col-12 col-md-4 order-md-last">
+        <article class="bg-white px-3 mt-4 mb-2 pb-2 border">
+          <h2>Vädret på Nicksta</h2>
+          <div class="table-responsive">
+            <table class="table table-striped">
+              <caption class="d-none">Vädret på Nicksta</caption>
+              <thead class="table-head">
+                <tr>
+                  <th scope="col">Klocka</th>
+                  <th scope="col">Väder</th>
+                  <th scope="col">Värme</th>
+                  <th scope="col">Vind</th>
+                </tr>
+              </thead>
+              <tbody class="weather-data">
+                
+              </tbody>
+            </table>
           </div>
-          <div>
-            <article>
-              <h2>Åker tågen?</h2>
-              <div class="forms">
-                <form action="#">
-                  <div class="form-group">
-                    <label for="depart-from">Jag åker ifrån..</label>
-                    <div>
-                      <input class="form-control" id="depart-from" type="text" required>
-                    </div>
-                  </div>
-                  <button class="btn btn-color" type="submit">Sök</button>
-                </form>
+        </article>
+      </div>
+
+
+      <div class="col-12 col-md-8 order-md-first">
+        <article class="bg-white px-3 pb-1 mt-4 mb-2 border">
+          <h2>Åker tågen?</h2>
+          <div class="forms">
+            <form action="#">
+              <div class="form-group">
+                <label for="depart-from">Jag åker ifrån..</label>
+                <div>
+                  <input class="form-control" id="depart-from" type="text" required>
+                </div>
               </div>
-              <div class="table-responsive-md">
-                <table class="table table-striped">
-                  <caption class="d-none">Åker tågen?</caption>
-                  <thead>
-                    <tr>
-                      <th>Nr</th>
-                      <th>Avgår</th>
-                      <th>Ankommer</th>
-                    </tr>
-                  </thead>
-                  <tbody class="train-data">
-                    <!-- <tr>
-                      <td>42</td>
-                      <td>10:25</td>
-                      <td>11:23</td>
-                    </tr>
-                    <tr>
-                      <td>42</td>
-                      <td>12:25</td>
-                      <td>13:23</td>
-                    </tr>
-                    <tr>
-                      <td>42</td>
-                      <td>14:25</td>
-                      <td>15:23</td>
-                    </tr> -->
-                  </tbody>
-                  <tfoot>
-                    <tr>
-                      <td colspan="3">Inga problem i trafiken</td>
-                    </tr>
-                  </tfoot>
-                </table>
-              </div>
-            </article>
+              <button class="btn btn-color" type="submit">Sök</button>
+            </form>
           </div>
-        </div>
+          <div class="table-responsive mt-2">
+            <table class="table table-striped">
+              <caption class="d-none">Åker tågen?</caption>
+              <thead class="table-head">
+                <tr>
+                  <th>Nr</th>
+                  <th>Avgår</th>
+                  <th>Ankommer</th>
+                </tr>
+              </thead>
+              <tbody class="train-data">
+                <!-- <tr>
+                            <td>42</td>
+                            <td>10:25</td>
+                            <td>11:23</td>
+                          </tr>
+                          <tr>
+                            <td>42</td>
+                            <td>12:25</td>
+                            <td>13:23</td>
+                          </tr>
+                          <tr>
+                            <td>42</td>
+                            <td>14:25</td>
+                            <td>15:23</td>
+                          </tr> -->
+              </tbody>
+              <tfoot>
+                <tr>
+                  <td class="traffic-status" colspan="3">Inga problem i trafiken</td>
+                </tr>
+              </tfoot>
+            </table>
+            <p class="text-muted">Åker från: <span class="depart-from"></span></p>
+          </div>
+        </article>
       </div>
     </div>
   </div>
