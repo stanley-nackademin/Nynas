@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="styles/general.css">
+  <title>Nickstabadet - Väder</title>
+</head>
+<body>
+  <header class="header">
+    <h1>Nickstabadet</h1>
+    <p>Ett solig sommarbad</p>
+  </header>
+  <nav class="nav">
+    <ul>
+      <li><a href="index.html">Hem</a></li>
+      <li><a href="contact.html">Kontakt</a></li>
+      <li><a href="status.html" id="current-page">Väder</a></li>
+      <li class="back-button"><a href="#">Tillbaks</a></li>
+    </ul>
+  </nav>
+  <div class="container">
+    <div class="item-main">
+      <section class="section main-border">
+        <h2>Vädret på Nicksta</h2>
+        <div class="tables">
+          <table>
+            <thead>
+              <tr>
+                <th>Klocka</th>
+                <th>Väder</th>
+                <th>Värme</th>
+                <th>Vind</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>09:00</td>
+                <td>Moln</td>
+                <td>16&deg;C</td>
+                <td>3m/s</td>
+              </tr>
+              <tr>
+                <td>12:00</td>
+                <td>Sol</td>
+                <td>18&deg;C</td>
+                <td>4m/s</td>
+              </tr>
+              <tr>
+                <td>15:00</td>
+                <td>Sol</td>
+                <td>20&deg;C</td>
+                <td>2m/s</td>
+              </tr>
+              <tr>
+                <td>18:00</td>
+                <td>Regn</td>
+                <td>19&deg;C</td>
+                <td>3m/s</td>
+              </tr>
+              <tr>
+                <td>21:00</td>
+                <td>Moln</td>
+                <td>17&deg;C</td>
+                <td>1m/s</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <h2>Åker tågen?</h2>
+        <div class="forms">
+          <form action="#">
+            <div>
+              <label>
+                Jag åker ifrån..
+                <input name="depart-from" type="text" required>
+              </label>
+            </div>
+            <button type="submit">Skicka</button>
+          </form>
+        </div>
+        <div class="tables">
+          <table>
+            <caption>Åker från:</caption>
+            <thead>
+              <tr>
+                <th>Nr</th>
+                <th>Avgår</th>
+                <th>Ankommer</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>42</td>
+                <td>10:25</td>
+                <td>11:23</td>
+              </tr>
+              <tr>
+                <td>42</td>
+                <td>12:25</td>
+                <td>13:23</td>
+              </tr>
+              <tr>
+                <td>42</td>
+                <td>14:25</td>
+                <td>15:23</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td colspan="3">Inga problem i trafiken</td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </section>
+    </div>
+    <div class="item-side"></div>
+  </div>
+  <div class="footerholder">
+    <footer>
+      <address>
+        Vill du veta mer? Skicka e-post till
+        <a href="mailto:info@nickstabadet.se">info@nickstabadet.se</a>
+      </address>
+    </footer>
+  </div>
+</body>
+</html>

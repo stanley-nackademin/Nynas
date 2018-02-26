@@ -1,0 +1,30 @@
+/* Header */
+.header {
+  background-image: url("../assets/images/layout/header-sky.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 30px 30px 30px;
+  color: #242291;
+}
+
+.figcaption {
+  font-size: 0.75rem;
+}
+
+.border {
+  border-radius: 10px;
+  box-shadow: 0 0 5px 1px #8aa5d1;
+}
+
+.article {
+  overflow: hidden;
+}
+
+.btn-color {
+  background-color: tomato;
+  color: white;
+}
+
+@media only screen and (min-width: 768px) {
+  
+}

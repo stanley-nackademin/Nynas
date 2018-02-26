@@ -1,0 +1,228 @@
+@import url("reset.css");
+
+
+/* Header */
+.header {
+  background-image: url("../assets/images/layout/header-sky.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 30px 30px 30px;
+  color: #242291;
+}
+
+.header h1 {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.header p {
+  font-size: 18px;
+}
+
+
+/* Side */
+.side {
+  border-radius: 10px;
+  border: 2px solid #8aa5d1;
+  padding: 20px;
+  box-shadow: 0 0 5px 1px #8aa5d1;
+}
+
+.side img {
+  display: block;
+  margin: 5px 0;
+  width: 150px;
+  height: 124px;
+}
+
+
+/* Aside */
+.aside {
+  background-color: #fff;
+  /* Works on div if they are inline-blocks */
+  text-align: center;
+}
+
+.aside h2 {
+  font-size: 22px;
+  font-weight: 600;
+  color: #6a9a1f;
+}
+
+
+/* Section */
+.section {
+  background-color: #fff;
+  padding: 5px 0;
+}
+
+.section h2, h3 {
+  font-weight: 600;
+  color: #6a9a1f;
+}
+
+.section h2 {
+  font-size: 22px;
+  margin: 5px 15px 0;
+}
+
+.section h3 {
+  font-size: 20px;
+  padding: 10px 0;
+}
+
+.section .main-content {
+  margin: 0 15px;
+  overflow: hidden;
+}
+
+.section .main-content p {
+  font-size: 16px;
+}
+
+.section figure {
+  margin-right: 30px;
+  float: left;
+}
+
+.section figcaption {
+  font-size: 13px;
+}
+
+.section textarea {
+  font-size: 16px;
+}
+
+.section input {
+  font-size: 18px;
+}
+
+.section form {
+  font-size: 16px;
+  margin: 5px;
+}
+
+.section form div {
+  margin: 5px;
+}
+
+.section form small {
+  font-size: 13px;
+}
+
+
+/* Flex container */
+.container {
+  display: flex;
+  padding-top: 20px;
+  padding-bottom: 50px;
+  background-color: #e8eaed;
+}
+
+.item-main {
+  flex: 3;
+  padding: 0 50px;
+}
+
+.item-side {
+  flex: 1;
+  padding: 0 50px;
+  margin-left: -50px;
+}
+
+
+/* Navigation */
+.nav {
+  background-color: #404040;
+}
+
+.nav .back-button {
+  float: right;
+}
+
+.nav li {
+  display: inline-block;
+  margin-left: -5px;
+}
+
+.nav li a {
+  display: block;
+  padding: 10px;
+  font-size: 1.1em;
+  color: #f6f6e8;
+  text-decoration: none;
+}
+
+.nav li a:hover {
+  background-color: #00ace9;
+}
+
+
+/* Tables */
+.tables table, th, td {
+  border: 1px solid black;
+  padding: 5px;
+  text-align: center;
+}
+
+.tables table {
+  margin: 10px;
+}
+
+
+/* One time usage */
+.footerholder {
+  bottom: 0;
+  position: fixed;
+  text-align: center;
+  width: 100%;
+  height: 1em;
+  background-color: white;
+  border-top: 2px solid #8aa5d1;
+}
+
+#current-page {
+  background-color: #00ace9;
+}
+
+.main-border {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-top: 5px solid #8aa5d1;
+  border-left: 2px solid #8aa5d1;
+  border-right: 2px solid #8aa5d1;
+  border-bottom: 2px solid #8aa5d1;
+  box-shadow: 0 0 5px 1px #8aa5d1;
+}
+
+.group-up {
+  display: inline-block;
+}
+
+body {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  background: #fff;
+}
+
+
+@media only screen and (max-width:650px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .item-main {
+    order: 2;
+  }
+
+  .item-side {
+    order: 1;
+    padding: 0 50px 20px;
+    margin-left: 0;
+  }
+
+  .side img {
+    display: inline-block;
+    height: 30%;
+    width: 30%;
+  }
+}
