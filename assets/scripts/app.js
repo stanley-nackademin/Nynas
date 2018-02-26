@@ -21,7 +21,7 @@ function Table(data) {
   this.objects = data.objects;
 }
 
-// Table prototype
+// Table prototype, add weather data to table
 Table.prototype.putData = function() {
   for (let i = 0; i < this.objects.length; i++) {
     var row = document.createElement('tr');
@@ -35,8 +35,10 @@ Table.prototype.putData = function() {
   }
 }
 
+// Remove all weather data from table and query weather data
 Table.prototype.updateData = function() {
-  
+  this.container.innerHTML = "";
+  this.putData();
 }
 
 // Constructor för tågtabell-objekt
