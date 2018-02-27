@@ -46,6 +46,14 @@ function TrainTable(data) {
   Table.call(this, data);
 }
 
+TrainTable.prototype.departFrom = function() {
+  
+}
+
+TrainTable.prototype.trafficStatus = function() {
+
+}
+
 // Let TrainTable inherit the functions from Table object
 TrainTable.prototype = Object.create(Table.prototype);
 TrainTable.prototype.constructor = TrainTable;

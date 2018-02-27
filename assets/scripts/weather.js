@@ -22,6 +22,10 @@ function fetch(url) {
   return new HttpGet(url);
 }
 
+function firstCharUpper(text) {
+  return text.charAt(0).toUpperCase() + text.slice(1);
+}
+
 var weatherObjects = {
   container: '.weather-data',
   objects: []
@@ -35,7 +39,7 @@ fetch(API_URL).proceed(response => {
     let hours = new Date(weatherList[i].dt_txt).getHours() + ":00";
     let windSpeed = Number(weatherList[i].wind.speed).toFixed(1) + "m/s";
     let temperature = Number(weatherList[i].main.temp).toFixed(1) + "&deg;C";
-    let weatherState = weatherList[i].weather[0].description;
+    let weatherState = firstCharUpper(weatherList[i].weather[0].description);
     
     let weatherObject = new Weather(hours, weatherState, temperature, windSpeed);
     weatherObjects.objects.push(weatherObject);
@@ -43,4 +47,3 @@ fetch(API_URL).proceed(response => {
   var weather = new WeatherTable(weatherObjects);
   weather.putData();
 });
-
