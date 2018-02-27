@@ -44,6 +44,10 @@ fetch(API_URL).proceed(response => {
     let weatherObject = new Weather(hours, weatherState, temperature, windSpeed);
     weatherObjects.objects.push(weatherObject);
   }
+  printWeather();
+});
+
+function printWeather() {
   var weather = new WeatherTable(weatherObjects);
   weather.putData();
-});
+}

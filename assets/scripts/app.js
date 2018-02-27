@@ -46,17 +46,23 @@ function TrainTable(data) {
   Table.call(this, data);
 }
 
-TrainTable.prototype.departFrom = function() {
-  
-}
-
-TrainTable.prototype.trafficStatus = function() {
-
-}
+/*
+* Viktig! Ompekningen för prototypen måste ske innan man lägger till fler prototyp-
+* variablar eller funktioner annars skrivs de över.
+*/
 
 // Let TrainTable inherit the functions from Table object
 TrainTable.prototype = Object.create(Table.prototype);
 TrainTable.prototype.constructor = TrainTable;
+
+TrainTable.prototype.departFrom = function() {
+  
+}
+
+TrainTable.prototype.trafficStatus = function(text) {
+  this.statusText = document.querySelector('.traffic-status');
+  this.statusText.innerHTML = text;
+}
 
 // Constructor för vädertabell-objekt
 function WeatherTable(data) {
@@ -68,7 +74,7 @@ WeatherTable.prototype = Object.create(Table.prototype);
 WeatherTable.prototype.constructor = WeatherTable;
 
 
-// Dummy data
+// Mock data
 /* var train1 = new Train(42, '10:25', '11:23');
 var train2 = new Train(42, '12:25', '13:23');
 var train3 = new Train(42, '14:25', '15:23');
