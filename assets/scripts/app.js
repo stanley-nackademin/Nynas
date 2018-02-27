@@ -56,6 +56,7 @@ TrainTable.prototype = Object.create(Table.prototype);
 TrainTable.prototype.constructor = TrainTable;
 
 TrainTable.prototype.departFrom = function() {
+  this.departureText = document.querySelector('.depart-from');
   
 }
 
