@@ -9,10 +9,10 @@ var trainObjects = {
   objects: [train1, train2, train3]
 };
 
-function fetch() {
-  var train = new TrainTable(trainObjects);
-  train.putData();
-  train.trafficStatus('Inga problem i trafiken');
+var train = new TrainTable(trainObjects);
+
+function initialize() {
+  train.departFrom();
 }
 
-fetch();
+initialize();
