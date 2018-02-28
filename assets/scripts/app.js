@@ -75,10 +75,12 @@ TrainTable.prototype.departFrom = function() {
   this.searchButton = document.querySelector('.search-btn');
   this.searchButton.addEventListener('click', event => {
     let input = document.querySelector('.depart-from-input');
-    this.departureText.innerHTML = input.value;
-    input.value = "";
-    this.updateData();
-    this.trafficStatus('Inga problem i trafiken');
+    if (input.value) {
+      this.departureText.innerHTML = input.value;
+      input.value = "";
+      this.updateData();
+      this.trafficStatus('Inga problem i trafiken');
+    }
   });
 }
 
