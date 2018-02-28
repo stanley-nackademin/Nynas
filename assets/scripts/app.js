@@ -22,7 +22,7 @@ function Table(data) {
 }
 
 // Table prototype, add weather data to table
-Table.prototype.putData = function() {
+/* Table.prototype.putData = function() {
   for (let i = 0; i < this.objects.length; i++) {
     var row = document.createElement('tr');
 
@@ -30,6 +30,21 @@ Table.prototype.putData = function() {
       var cell = document.createElement('td');
       cell.innerHTML = value;
       row.appendChild(cell);
+    }
+    this.container.appendChild(row);
+  }
+} */
+
+// Alternative way to add weather data to table
+Table.prototype.putData = function () {
+  for (let object in this.objects) {
+    var row = document.createElement('tr');
+    for (let property in this.objects[object]) {
+      if (this.objects[object].hasOwnProperty(property)) {
+        var cell = document.createElement('td');
+        cell.innerHTML = this.objects[object][property];
+        row.appendChild(cell);
+      }
     }
     this.container.appendChild(row);
   }
